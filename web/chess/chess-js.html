@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        .container {
+            margin-top: 0.7%;
+            margin-left: 24%;
+        }
+
+        .black {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            border: solid;
+            margin-left: 0.1%
+        }
+
+        .white {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border: solid;
+            margin-left: 0.1%
+        }
+
+        table {
+            border: thin solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table id="board" class="chessboard">
+        </table>
+    </div>
+    <script>
+        const board = document.getElementById('board');
+        const isFirstCellBlack = true;
+        for (let i = 0; i < 8; i++) {
+            const row = board.insertRow(i);
+            let rowFirstCellType = (i % 2 === 0) ? 'black' : 'white';
+            let cellType = rowFirstCellType;
+            let lastCellType = cellType;
+            let box = null;
+            for (let j = 0; j < 8; j++) {
+                const cell = row.insertCell(j);
+                if (j !== 0) {
+                    cellType = lastCellType === 'black' ? 'white' : 'black';
+                }
+                if (cellType === 'black') {
+                    const black = document.createElement("div");
+                    black.setAttribute('class', 'black');
+                    box = black;
+                } else {
+                    const white = document.createElement("div");
+                    white.setAttribute('class', 'white');
+                    box = white;
+                }
+                cell.appendChild(box);
+                lastCellType = cellType;
+            }
+        }
+    </script>
+</body>
+
+</html>
