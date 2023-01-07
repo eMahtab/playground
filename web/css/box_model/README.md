@@ -19,5 +19,6 @@ The box model allows us to add a border around elements, and to define space bet
 ### Width and Height of an Element
 In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
 
-### Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
+### Important: 
+When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
