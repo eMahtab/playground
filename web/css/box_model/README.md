@@ -22,3 +22,5 @@ In order to set the width and height of an element correctly in all browsers, yo
 ### Important: 
 When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
+# References :
+https://www.w3schools.com/css/css_boxmodel.asp
